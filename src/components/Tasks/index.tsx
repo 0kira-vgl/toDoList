@@ -4,9 +4,10 @@ import { Task } from "../Task";
 interface Props {
   tasks: ITask[];
   onDelete: (taskId: string) => void;
+  onComplete: (taskId: string) => void;
 }
 
-export function Tasks({ tasks, onDelete }: Props) {
+export function Tasks({ tasks, onDelete, onComplete }: Props) {
   const tasksQuantity = tasks.length;
   const completedTasks = tasks.filter((task) => task.isCompleted).length;
 
@@ -30,7 +31,12 @@ export function Tasks({ tasks, onDelete }: Props) {
 
       <div className="flex flex-col gap-3">
         {tasks.map((task) => (
-          <Task key={task.id} task={task} onDelete={onDelete} />
+          <Task
+            key={task.id}
+            task={task}
+            onDelete={onDelete}
+            onComplete={onComplete}
+          />
         ))}
       </div>
     </section>
