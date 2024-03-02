@@ -1,3 +1,4 @@
+import { TbClipboardText } from "react-icons/tb";
 import { ITask } from "../../App";
 import { Task } from "../Task";
 
@@ -38,6 +39,18 @@ export function Tasks({ tasks, onDelete, onComplete }: Props) {
             onComplete={onComplete}
           />
         ))}
+
+        {tasks.length <= 0 && (
+          <section className="mt-16 flex items-center justify-center flex-col gap-4 text-Tgray-300 text-center">
+            <TbClipboardText className="opacity-30" size={50} />
+            <div>
+              <p className="font-bold">
+                Você ainda não tem tarefas cadastradas
+              </p>
+              <span>Crie tarefas e organize seus itens a fazer</span>
+            </div>
+          </section>
+        )}
       </div>
     </section>
   );
