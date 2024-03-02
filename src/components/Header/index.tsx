@@ -35,7 +35,7 @@ export function Header({ onAddTask }: Props) {
           placeholder="Adicione uma nova tarefa"
           className="placeholder:text-Tgray-300 h-full text-lg flex-1 text-Tgray-100 bg-Tgray-500 border border-solid border-Tgray-700 px-4 py-0 rounded-lg"
         />
-        <button className="h-full px-2 py-0 gap-1 font-bold text-sm md:px-4 md:py-0 bg-Tblue-dark text-Tgray-100 border-none rounded-lg flex items-center">
+        <button className="h-full px-2 py-0 gap-1 font-bold text-sm md:px-4 md:py-0 duration-75 hover:bg-[#125277] bg-Tblue-dark text-Tgray-100 border-none rounded-lg flex items-center">
           Criar
           <AiOutlinePlusCircle className="font-bold" size={20} />
         </button>

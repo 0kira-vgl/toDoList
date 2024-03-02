@@ -18,7 +18,7 @@ export function Task({ task, onDelete, onComplete }: Props) {
         {task.isCompleted ? (
           <BsFillCheckCircleFill className="w-full h-full text-Tpurple" />
         ) : (
-          <div className="w-full h-full rounded-[50%] border-2 border-solid border-[#4ea8de]" />
+          <div className="w-full h-full rounded-[50%] border-2 border-solid border-Tblue" />
         )}
       </button>
 
@@ -36,7 +36,7 @@ export function Task({ task, onDelete, onComplete }: Props) {
         onClick={() => onDelete(task.id)}
         className="border-none text-Tgray-300"
       >
-        <TbTrash size={20} />
+        <TbTrash className="hover:text-[#FF4136] duration-100" size={20} />
       </button>
     </div>
   );
